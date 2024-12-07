@@ -1,0 +1,17 @@
+A more robust approach would involve using a JavaScript fallback mechanism to detect browser compatibility and adjust rendering accordingly.
+
+```css
+.my-element {
+  position: relative; /* Ensure proper positioning for the added content */
+}
+
+.my-element:before {
+  content: '!';
+  position: absolute;
+  left: 0;
+  top: 0;
+  /* Add styles to position and style the content appropriately */
+}
+```
+
+This solution prioritizes using the `::before` pseudo-element but adds styles to the `.my-element` itself, ensuring that the content shows regardless of browser support for the pseudo-element.
