@@ -1,0 +1,7 @@
+The following CSS code has an uncommon error: it uses a selector that's valid in some browsers but not others, leading to inconsistent rendering.
+
+```css
+.my-element::before { content: '!'; }
+```
+
+The `::before` pseudo-element is used to insert content before an element. While widely supported, older or less common browsers might not render this correctly.  Inconsistent rendering across browsers is a common problem here.
